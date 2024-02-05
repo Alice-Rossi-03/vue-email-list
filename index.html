@@ -22,8 +22,8 @@
         <hr class="my-4">
 
         <h3 class="text-center my-3">Random Emails:</h3>
-        <ul class="text-center px-0">
-            <li v-for="randomEmail in 10" class="my-2">{{ this.randomEmail }}</li>
+        <ul class="text-center px-0" :class="(randomEmails.length != 10) ? 'd-none' : '' ">
+            <li v-for="randomEmailHtml in randomEmails" class="my-2">{{ randomEmailHtml }}</li>
         </ul>
     </div>
     
